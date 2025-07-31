@@ -1,4 +1,4 @@
-﻿namespace OrderProcessing.Tests;
+﻿namespace Infrastructure.Tests;
 
 public class UnitTest1
 {
