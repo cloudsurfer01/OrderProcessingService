@@ -52,3 +52,9 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# Ignore Visual Studio user-specific files
+.vs/
+*.suo
+**/DocumentLayout.json
+**/DocumentLayout.backup.json
