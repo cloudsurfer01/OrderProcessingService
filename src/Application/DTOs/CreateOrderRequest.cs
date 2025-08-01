@@ -7,13 +7,3 @@ public class CreateOrderRequest
     public string DeliveryAddress { get; set; } = string.Empty;
     public string InvoiceCreditCardNumber { get; set; } = string.Empty;
 }
-
-public class ProductItem
-{
-    public string ProductId { get; set; } = string.Empty;
-    public string ProductName { get; set; } = string.Empty;
-    public int ProductAmount { get; set; }
-    public decimal ProductPrice { get; set; } = 0.0m;
-}
-
-
