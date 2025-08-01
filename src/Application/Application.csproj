@@ -10,7 +10,10 @@
     <Folder Include="Mapping\" />
     <Folder Include="Validators\" />
     <Folder Include="Queries\" />
-    <Folder Include="Orders\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="13.0.0" />
   </ItemGroup>
 
 </Project>
