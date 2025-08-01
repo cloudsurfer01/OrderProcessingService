@@ -21,6 +21,4 @@ public class EmailTests
     {
         Assert.Throws<ArgumentException>(() => new Email(param));
     }
-    
 }
-
