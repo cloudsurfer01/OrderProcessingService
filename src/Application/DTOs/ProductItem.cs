@@ -7,4 +7,3 @@ public class ProductItem
     public int ProductAmount { get; set; }
     public decimal ProductPrice { get; set; } = 0.0m;
 }
-

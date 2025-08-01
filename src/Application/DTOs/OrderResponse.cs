@@ -9,4 +9,3 @@ public class OrderResponse
     public string InvoiceCreditCardNumber { get; set; } = string.Empty;
     public DateTime CreatedAt { get; set; }
 }
-
