@@ -21,12 +21,16 @@ public class CreditCardNumber
 
     private static bool IsValidCreditCardNumber(string value)
     {
+        var digitsOnly = new string(value.Where(char.IsDigit).ToArray());
+        if (digitsOnly.Length < 13 || digitsOnly.Length > 19)
+            return false; 
+
         // Simple Luhn algorithm check for credit card number validity
         var sum = 0;
         var alternate = false;
-        for (var i = value.Length - 1; i >= 0; i--)
+        for (var i = digitsOnly.Length - 1; i >= 0; i--)
         {
-            var n = int.Parse(value[i].ToString());
+            var n = int.Parse(digitsOnly[i].ToString());
             if (alternate)
             {
                 n *= 2;
