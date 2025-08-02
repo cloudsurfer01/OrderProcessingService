@@ -1,5 +1,5 @@
 using Application.Orders.Commands;
-using Application.Validators;
+using Application.Orders.Validators;
 using FluentValidation;
 
 
