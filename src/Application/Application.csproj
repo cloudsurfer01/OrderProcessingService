@@ -7,9 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Mapping\" />
-    <Folder Include="Validators\" />
-    <Folder Include="Queries\" />
+    <Folder Include="Orders\Mapping\" />
+    <Folder Include="Orders\Queries\" />
   </ItemGroup>
 
   <ItemGroup>
