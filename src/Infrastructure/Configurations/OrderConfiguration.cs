@@ -10,9 +10,19 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
     {
         orderBuilder.HasKey(o => o.OrderNumber);
 
-        orderBuilder.Property(o => o.InvoiceAddress).IsRequired();
-        orderBuilder.Property(o => o.InvoiceEmailAddress).IsRequired();
-        orderBuilder.Property(o => o.CreditCardNumber).IsRequired();
+        orderBuilder.OwnsOne(o => o.InvoiceAddress, a =>
+        {
+            a.Property(p => p.Value).HasColumnName("InvoiceAddress").IsRequired();
+        });
+        orderBuilder.OwnsOne(o => o.InvoiceEmailAddress, e =>
+        {
+            e.Property(p => p.Value).HasColumnName("InvoiceEmailAddress").IsRequired();
+        });
+        orderBuilder.OwnsOne(o => o.CreditCardNumber, c =>
+        {
+            c.Property(p => p.Value).HasColumnName("CreditCardNumber").IsRequired();
+        });
+
         orderBuilder.Property(o => o.CreatedAt).IsRequired();
 
         orderBuilder.OwnsMany(o => o.Products, productBuilder =>
