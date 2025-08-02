@@ -1,4 +1,6 @@
 using Application.Orders.Commands;
+using Application.Validators;
+using FluentValidation;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddMediatR(cfg =>
     cfg.RegisterServicesFromAssembly(typeof(CreateOrderCommand).Assembly));
+builder.Services.AddValidatorsFromAssemblyContaining<CreateOrderRequestValidator>();
 
 var app = builder.Build();
 
