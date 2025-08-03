@@ -5,8 +5,8 @@ namespace Domain.Entities;
 public class Order
 {
     public Guid OrderNumber { get; private set; }
-    private readonly List<Product> _products = new ();
-    public IReadOnlyList<Product> Products => _products.AsReadOnly();
+    private readonly List<Domain.ValueObjects.Product> _products = new ();
+    public IReadOnlyList<Domain.ValueObjects.Product> Products => _products.AsReadOnly();
     public Address? InvoiceAddress { get; private set; }
     public Email? InvoiceEmailAddress { get; private set;  }
     public CreditCardNumber? CreditCardNumber { get; private set; }
@@ -14,7 +14,7 @@ public class Order
 
     public Order() { }
 
-    public Order(IEnumerable<Product> products, Address? invoiceAddress, Email? invoiceEmailAddress, CreditCardNumber? creditCardNumber)
+    public Order(IEnumerable<Domain.ValueObjects.Product> products, Address? invoiceAddress, Email? invoiceEmailAddress, CreditCardNumber? creditCardNumber)
     {
         if(!products.Any()) throw new ArgumentException("Order must contain at least one product.");
 
