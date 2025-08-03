@@ -4,6 +4,7 @@ using Domain.Abstractions.Repositories;
 using Infrastructure.Repositories;
 using FluentValidation;
 using Infrastructure.Data;
+using Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -18,6 +19,7 @@ builder.Services.AddValidatorsFromAssemblyContaining<CreateOrderRequestValidator
 builder.Services.AddDbContext<OrderDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddScoped<IProductStockChecker, ProductStockChecker>();
 
 var app = builder.Build();
 
