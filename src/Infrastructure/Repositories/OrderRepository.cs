@@ -10,6 +10,7 @@ public class OrderRepository(OrderDbContext dbContext) : IOrderRepository
     public async Task AddAsync(Order order, CancellationToken cancellationToken = default)
     {
         await dbContext.Orders.AddAsync(order, cancellationToken);
+        await dbContext.SaveChangesAsync(cancellationToken);
     }
 
     public async Task<Order?> GetByOrderNumberAsync(Guid orderNumber, CancellationToken cancellationToken = default)
