@@ -1,5 +1,7 @@
 using Application.Orders.Commands;
 using Application.Orders.Validators;
+using Domain.Abstractions.Repositories;
+using Infrastructure.Repositories;
 using FluentValidation;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +17,7 @@ builder.Services.AddMediatR(cfg =>
 builder.Services.AddValidatorsFromAssemblyContaining<CreateOrderRequestValidator>();
 builder.Services.AddDbContext<OrderDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 
 var app = builder.Build();
 
