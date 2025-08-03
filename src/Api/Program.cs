@@ -3,6 +3,7 @@ using Application.Orders.Validators;
 using FluentValidation;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,12 @@ builder.Services.AddDbContext<OrderDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
+
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
+builder.Host.UseSerilog();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
