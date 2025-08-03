@@ -13,19 +13,15 @@ public class CreateOrderCommandHandler(
     ILogger<CreateOrderCommandHandler> logger
         ) : IRequestHandler<CreateOrderCommand, OrderResponse>
 {
-    private readonly IOrderRepository _orderRepository = orderRepository;
-    private readonly IProductStockChecker _productStockChecker = productStockChecker;
-    private readonly ILogger<CreateOrderCommandHandler> _logger = logger;
-
     public async Task<OrderResponse> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
     {
         foreach (var item in request.Request.Products)
         {
-            if (!await productStockChecker.IsProductInStockAsync(item.ProductId, item.ProductAmount))
-            {
-                logger.LogWarning("Product {ProductId} is out of stock.", item.ProductId);
-                throw new InvalidOperationException($"Product {item.ProductId} is out of stock.");
-            }
+            if (await productStockChecker.IsProductInStockAsync(item.ProductId, item.ProductAmount, cancellationToken))
+                continue;
+
+            logger.LogWarning("Product {ProductId} is out of stock.", item.ProductId);
+            throw new InvalidOperationException($"Product {item.ProductId} is out of stock.");
         }
 
         var order = new Order(
@@ -36,9 +32,9 @@ public class CreateOrderCommandHandler(
             new CreditCardNumber(request.Request.InvoiceCreditCardNumber)
         );
 
-        await _orderRepository.AddAsync(order);
+        await orderRepository.AddAsync(order, cancellationToken);
 
-        _logger.LogInformation("Order {OrderNumber} created successfully.", order.OrderNumber);
+        logger.LogInformation("Order {OrderNumber} created successfully.", order.OrderNumber);
 
         return new OrderResponse
         {

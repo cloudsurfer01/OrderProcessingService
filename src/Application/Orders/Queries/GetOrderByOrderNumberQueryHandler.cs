@@ -6,8 +6,8 @@ using Microsoft.Extensions.Logging;
 namespace Application.Orders.Queries;
 
 public class GetOrderByOrderNumberQueryHandler(
-                    IOrderRepository orderRepository, 
-                    ILogger logger): IRequestHandler<GetOrderByOrderNumberQuery, OrderResponse>
+                    IOrderRepository orderRepository,
+                    ILogger<GetOrderByOrderNumberQueryHandler> logger): IRequestHandler<GetOrderByOrderNumberQuery, OrderResponse>
 {
     public async Task<OrderResponse> Handle(GetOrderByOrderNumberQuery request, CancellationToken cancellationToken)
     {
