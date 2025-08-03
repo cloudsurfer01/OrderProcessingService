@@ -10,6 +10,7 @@ namespace Application.Orders.Commands;
 public class CreateOrderCommandHandler(
     IOrderRepository orderRepository,
     IProductStockChecker productStockChecker,
+    IProductRepository productRepository,
     ILogger<CreateOrderCommandHandler> logger
         ) : IRequestHandler<CreateOrderCommand, OrderResponse>
 {
@@ -17,11 +18,11 @@ public class CreateOrderCommandHandler(
     {
         foreach (var item in request.Request.Products)
         {
-            if (await productStockChecker.IsProductInStockAsync(item.ProductId, item.ProductAmount, cancellationToken))
-                continue;
-
-            logger.LogWarning("Product {ProductId} is out of stock.", item.ProductId);
-            throw new InvalidOperationException($"Product {item.ProductId} is out of stock.");
+            if (!await productStockChecker.IsProductInStockAsync(item.ProductId, item.ProductAmount, cancellationToken))
+            {
+                logger.LogWarning("Product {ProductId} is out of stock.", item.ProductId);
+                throw new InvalidOperationException($"Product {item.ProductId} is out of stock.");
+            }
         }
 
         var order = new Order(
@@ -33,6 +34,11 @@ public class CreateOrderCommandHandler(
         );
 
         await orderRepository.AddAsync(order, cancellationToken);
+
+        foreach (var item in request.Request.Products)
+        {
+            await productRepository.ReduceStockAsync(Guid.Parse(item.ProductId), item.ProductAmount, cancellationToken);
+        }
 
         logger.LogInformation("Order {OrderNumber} created successfully.", order.OrderNumber);
 
