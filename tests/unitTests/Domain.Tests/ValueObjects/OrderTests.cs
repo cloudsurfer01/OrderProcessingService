@@ -9,10 +9,10 @@ public class OrderTests
     public void Constructor_Should_Create_Order_When_Valid()
     {
         // Arrange
-        var products = new List<Product>
+        var products = new List<Domain.ValueObjects.Product>
         {
-            new Product("123", "Laptop", 2, 1499.99m),
-            new Product("456", "Mouse", 1, 49.99m)
+            new Domain.ValueObjects.Product("123", "Laptop", 2, 1499.99m),
+            new Domain.ValueObjects.Product("456", "Mouse", 1, 49.99m)
         };
 
         var address = new Address("123 Sample Street, 90402 Berlin");
@@ -35,7 +35,7 @@ public class OrderTests
     public void Constructor_Should_Throw_When_Product_Is_Empty()
     {
         // Arrange
-        var product = new List<Product>();
+        var product = new List<Domain.ValueObjects.Product>();
         var address = new Address("123 Sample Street, 90402 Berlin");
         var email = new Email("ikhan@paessler.com");
         var creditCard = new CreditCardNumber("4111-1111-1111-1111");
@@ -48,10 +48,10 @@ public class OrderTests
     public void TotalPrice_Should_Return_Sum_Of_Product_TotalPrices()
     {
         // Arrange
-        var products = new List<Product>
+        var products = new List<Domain.ValueObjects.Product>
         {
-            new Product("123", "Laptop", 2, 100m),
-            new Product("456", "Mouse", 1, 50m)
+            new Domain.ValueObjects.Product("123", "Laptop", 2, 100m),
+            new Domain.ValueObjects.Product("456", "Mouse", 1, 50m)
         };
 
         // Act
@@ -67,15 +67,15 @@ public class OrderTests
     public void Products_Should_Be_ReadOnly()
     {
         // Arrange
-        var products = new List<Product>
+        var products = new List<Domain.ValueObjects.Product>
         {
-            new Product("123", "Laptop", 1, 100m)
+            new Domain.ValueObjects.Product("123", "Laptop", 1, 100m)
         };
 
         var order = new Order(products, null, null, null);
 
         //Act & Assert
-        Assert.IsAssignableFrom<IReadOnlyList<Product>>(order.Products);
-        Assert.Throws<NotSupportedException>(() => ((IList<Product>)order.Products).Add(new Product("456", "Mouse", 1, 50m)));
+        Assert.IsAssignableFrom<IReadOnlyList<Domain.ValueObjects.Product>>(order.Products);
+        Assert.Throws<NotSupportedException>(() => ((IList<Domain.ValueObjects.Product>)order.Products).Add(new Domain.ValueObjects.Product("456", "Mouse", 1, 50m)));
     }
 }
