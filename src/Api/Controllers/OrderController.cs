@@ -17,7 +17,7 @@ public class OrderController(IMediator mediator) : Controller
     }
 
     [HttpGet("{orderNumber}")]
-    public async Task<IActionResult> GetOrderByNumber(string orderNumber)
+    public async Task<IActionResult> GetOrderByNumber(Guid orderNumber)
     {
         var command = new GetOrderByOrderNumberQuery(orderNumber);
         var response = await mediator.Send(command);

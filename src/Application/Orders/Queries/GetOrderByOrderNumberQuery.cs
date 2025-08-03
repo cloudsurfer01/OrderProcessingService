@@ -3,7 +3,7 @@ using MediatR;
 
 namespace Application.Orders.Queries;
 
-public class GetOrderByOrderNumberQuery(string orderNumber) : IRequest<OrderResponse>
+public class GetOrderByOrderNumberQuery(Guid orderNumber) : IRequest<OrderResponse>
 {
-    public string OrderNumber { get; } = orderNumber;
+    public Guid OrderNumber { get; } = orderNumber;
 }
