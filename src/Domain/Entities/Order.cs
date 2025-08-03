@@ -5,7 +5,7 @@ namespace Domain.Entities;
 public class Order
 {
     public Guid OrderNumber { get; private set; }
-    private readonly List<Product> _products = new ();
+    private readonly List<Product> _products = new();
     public IReadOnlyList<Product> Products => _products.AsReadOnly();
     public Address? InvoiceAddress { get; private set; }
     public Email? InvoiceEmailAddress { get; private set;  }

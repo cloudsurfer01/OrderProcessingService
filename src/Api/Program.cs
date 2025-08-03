@@ -1,3 +1,4 @@
+using Application.Interfaces;
 using Application.Orders.Commands;
 using Application.Orders.Validators;
 using Domain.Abstractions.Repositories;
@@ -7,6 +8,7 @@ using Infrastructure.Data;
 using Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using Infrastructure.Factories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +27,8 @@ builder.Services.AddDbContext<OrderDbContext>(options =>
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IProductStockChecker, ProductStockChecker>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IStockService, StockService>();
+builder.Services.AddScoped<IOrderFactory, OrderFactory>();
 
 builder.Services.AddControllers();
 
