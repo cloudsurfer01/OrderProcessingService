@@ -14,22 +14,26 @@ public class CreateOrderCommandHandler(
     IProductRepository productRepository,
     IOrderFactory orderFactory,
     IStockService stockService,
-    IOrderResponseMapper orderResponseMapper,
     IStockReducer stockReducer,
     ILogger<CreateOrderCommandHandler> logger
-        ) : IRequestHandler<CreateOrderCommand, OrderResponse>
+) : IRequestHandler<CreateOrderCommand, Guid> // Changed return type
 {
-    public async Task<OrderResponse> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
+    public async Task<Guid> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
     {
+        // Check stock availability before creating the order
         await stockService.CheckAvailabilityAsync(request.Request.Products, cancellationToken);
 
+        // Create the order using factory
         var order = orderFactory.Create(request.Request);
 
+        // Persist the order
         await orderRepository.AddAsync(order, cancellationToken);
         logger.LogInformation("Order {OrderNumber} created successfully.", order.OrderNumber);
 
+        // Reduce stock for ordered products
         await stockReducer.ReduceAsync(request.Request.Products, cancellationToken);
-        
-        return orderResponseMapper.Map(order, request.Request.Products);
+
+        // Return only the OrderNumber (Guid)
+        return order.OrderNumber;
     }
 }

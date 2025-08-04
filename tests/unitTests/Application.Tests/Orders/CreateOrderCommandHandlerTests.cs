@@ -59,7 +59,6 @@ public class CreateOrderCommandHandlerTests
             mockProductRepo.Object,
             mockFactory.Object,
             mockStockService.Object,
-            mockMapper.Object,
             mockReducer.Object,
             mockLogger.Object
         );
@@ -71,6 +70,6 @@ public class CreateOrderCommandHandlerTests
         mockRepo.Verify(r =>
                 r.AddAsync(It.Is<Order>(o => o.OrderNumber == expectedOrder.OrderNumber), It.IsAny<CancellationToken>()),
             Times.Once);
-        Assert.Equal(expectedOrder.OrderNumber.ToString(), result.OrderNumber);
+        Assert.Equal(expectedOrder.OrderNumber, result);
     }
 }
