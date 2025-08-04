@@ -270,13 +270,24 @@ dotnet ef database update
 ```bash
 dotnet run --project src/API
 ```
-
 This will launch the ASP.NET Core Web API.
 
-Default URL:
+### 5 Product Seeding Required
+
+To enable stock validation and reduction logic (`IStockService`), you must manually seed data into the `Products` table.
+
+### Example Seed
+
+```sql
+INSERT INTO "Products" ("ProductId", "Name", "Stock", "Price")
+VALUES
+('00000000-0000-0000-0000-000000000001', 'Gaming Laptop', 10, 1499.99),
+('00000000-0000-0000-0000-000000000002', 'Wireless Mouse', 25, 49.99);
+```
+### Swagger URL:
 
 ```
-https://localhost:5001/swagger
+https://localhost:44320/swagger
 ```
 
 You can test:
@@ -306,5 +317,9 @@ This runs:
 
 Let me know if you want to include `.env` support, launch profiles, or Postman collection setup.
 
+### Clone the Repository
 
-
+```bash
+git clone https://github.com/cloudsurfer01/OrderProcessingService
+cd order-processing-service
+```
