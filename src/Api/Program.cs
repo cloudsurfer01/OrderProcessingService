@@ -31,6 +31,7 @@ builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IStockService, StockService>();
 builder.Services.AddScoped<IOrderFactory, OrderFactory>();
 builder.Services.AddScoped<IOrderResponseMapper, OrderResponseMapper>();
+builder.Services.AddScoped<IStockReducer, StockReducer>();
 
 builder.Services.AddControllers();
 
