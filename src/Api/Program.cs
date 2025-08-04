@@ -2,13 +2,14 @@ using Application.Interfaces;
 using Application.Orders.Commands;
 using Application.Orders.Validators;
 using Domain.Abstractions.Repositories;
-using Infrastructure.Repositories;
 using FluentValidation;
 using Infrastructure.Data;
+using Infrastructure.Factories;
+using Infrastructure.Mappings;
+using Infrastructure.Repositories;
 using Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
-using Infrastructure.Factories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +30,7 @@ builder.Services.AddScoped<IProductStockChecker, ProductStockChecker>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IStockService, StockService>();
 builder.Services.AddScoped<IOrderFactory, OrderFactory>();
+builder.Services.AddScoped<IOrderResponseMapper, OrderResponseMapper>();
 
 builder.Services.AddControllers();
 
