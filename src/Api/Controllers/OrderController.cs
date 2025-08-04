@@ -13,9 +13,16 @@ public class OrderController(IMediator mediator) : Controller
     [HttpPost]
     public async Task<IActionResult> CreateOrder([FromBody] CreateOrderRequest request)
     {
-        var command = new CreateOrderCommand(request);
-        var orderNumber = await mediator.Send(command);
-        return CreatedAtAction(nameof(GetOrderByNumber), new { orderNumber }, new { orderNumber });
+        try
+        {
+            var command = new CreateOrderCommand(request);
+            var orderNumber = await mediator.Send(command);
+            return CreatedAtAction(nameof(GetOrderByNumber), new { orderNumber }, new { orderNumber });
+        }
+        catch (ArgumentException ex)
+        {
+            return BadRequest(new { error = ex.Message });
+        }
     }
 
     [HttpGet("{orderNumber}")]
@@ -23,6 +30,10 @@ public class OrderController(IMediator mediator) : Controller
     {
         var command = new GetOrderByOrderNumberQuery(orderNumber);
         var response = await mediator.Send(command);
+
+        if (response == null)
+            return NotFound();
+
         return Ok(response);
     }
 }

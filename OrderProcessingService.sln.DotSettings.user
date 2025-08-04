@@ -9,9 +9,19 @@
     &lt;TestId&gt;xUnit::7111C952-5A9E-45A0-9F14-CAE8578DDFB5::net9.0::Integration.Tests.Orders.PostOrdersTests.Should_Create_Order_When_Valid_Request&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3d72e598_002Dff59_002D4794_002Da9ca_002D28a48b353739/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Should_Return_404_When_Order_Not_Found #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::7111C952-5A9E-45A0-9F14-CAE8578DDFB5::net9.0::Integration.Tests.Orders.GetOrdersTests.Should_Return_404_When_Order_Not_Found&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4929cd65_002D2b60_002D427c_002D8675_002D50de89c92369/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Should_Create_Order_When_Valid_Request #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::7111C952-5A9E-45A0-9F14-CAE8578DDFB5::net9.0::Integration.Tests.Orders.PostOrdersTests.Should_Create_Order_When_Valid_Request&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4b9391bd_002Da94b_002D4d86_002Db31e_002D4fe546d0b671/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Should_Return_404_When_Order_Not_Found" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::7111C952-5A9E-45A0-9F14-CAE8578DDFB5::net9.0::Integration.Tests.Orders.GetOrdersTests.Should_Return_404_When_Order_Not_Found&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=98c0077d_002Db8ac_002D4de2_002Dadb4_002D08179bc82468/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Should_Create_Order_When_Valid_Request" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
@@ -45,6 +55,14 @@
     &lt;TestId&gt;xUnit::7111C952-5A9E-45A0-9F14-CAE8578DDFB5::net9.0::Integration.Tests.PostOrdersTests.Should_Create_Order_When_Valid_Request&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::7111C952-5A9E-45A0-9F14-CAE8578DDFB5::net9.0::Integration.Tests.PostOrdersTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::7111C952-5A9E-45A0-9F14-CAE8578DDFB5::net9.0::Integration.Tests.Orders.PostOrdersTests.Should_Create_Order_When_Valid_Request&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7111C952-5A9E-45A0-9F14-CAE8578DDFB5::net9.0::Integration.Tests.Orders.PostOrdersTests.Should_Return_BadRequest_When_Request_Is_Invalid&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7111C952-5A9E-45A0-9F14-CAE8578DDFB5::net9.0::Integration.Tests.Orders.GetOrdersTests.Should_Return_Order_When_Exists&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7111C952-5A9E-45A0-9F14-CAE8578DDFB5::net9.0::Integration.Tests.Orders.GetOrdersTests.Should_Return_404_When_Order_Not_Found&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d7d3dbe2_002Dfe5c_002D4a29_002Da42c_002D406b3b685c01/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Should_Return_Order_When_Exists" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::7111C952-5A9E-45A0-9F14-CAE8578DDFB5::net9.0::Integration.Tests.Orders.GetOrdersTests.Should_Return_Order_When_Exists&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f0448b85_002Dc769_002D44d7_002Db1fb_002Da6bfed67f008/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Should_Create_Order_When_Valid_Request #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;

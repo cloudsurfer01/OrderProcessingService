@@ -2,7 +2,6 @@
 using System.Net.Http.Json;
 using Application.DTOs;
 using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.VisualStudio.TestPlatform.TestHost;
 
 namespace Integration.Tests.Orders;
 
@@ -37,4 +36,24 @@ public class PostOrdersTests(WebApplicationFactory<Program> factory) : IClassFix
         // Assert
         Assert.Equal(HttpStatusCode.Created, response.StatusCode);
     }
+
+    [Fact]
+    public async Task Should_Return_BadRequest_When_Request_Is_Invalid()
+    {
+        // Arrange: missing email and credit card number
+        var request = new CreateOrderRequest
+        {
+            Products = new List<ProductItem>(),
+            InvoiceAddress = "",
+            InvoiceEmailAddress = "",
+            InvoiceCreditCardNumber = ""
+        };
+
+        // Act
+        var response = await _client.PostAsJsonAsync("/Order", request);
+
+        // Assert
+        Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+    }
+
 }
