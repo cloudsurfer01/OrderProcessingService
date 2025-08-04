@@ -1,4 +1,29 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1797eb5d_002Ddd30_002D4e8f_002Da294_002Dd0cb2afeb29e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Should_Create_Order_When_Valid_Request #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::7111C952-5A9E-45A0-9F14-CAE8578DDFB5::net9.0::Integration.Tests.Orders.PostOrdersTests.Should_Create_Order_When_Valid_Request&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=32126636_002De311_002D4a9f_002Da743_002D61ed6d99a9f1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Should_Create_Order_When_Valid_Request #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::7111C952-5A9E-45A0-9F14-CAE8578DDFB5::net9.0::Integration.Tests.Orders.PostOrdersTests.Should_Create_Order_When_Valid_Request&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4929cd65_002D2b60_002D427c_002D8675_002D50de89c92369/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Should_Create_Order_When_Valid_Request #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::7111C952-5A9E-45A0-9F14-CAE8578DDFB5::net9.0::Integration.Tests.Orders.PostOrdersTests.Should_Create_Order_When_Valid_Request&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=98c0077d_002Db8ac_002D4de2_002Dadb4_002D08179bc82468/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Should_Create_Order_When_Valid_Request" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::7111C952-5A9E-45A0-9F14-CAE8578DDFB5::net9.0::Integration.Tests.PostOrdersTests.Should_Create_Order_When_Valid_Request&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c3e62ede_002D00ed_002D42c8_002D9e01_002Dffd2404072b1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Should_Create_Order_When_Valid_Request #6" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::7111C952-5A9E-45A0-9F14-CAE8578DDFB5::net9.0::Integration.Tests.Orders.PostOrdersTests.Should_Create_Order_When_Valid_Request&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=cf570c3a_002D87ca_002D4942_002Da3f0_002D7919bc08312b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Constructor_Should_Create_Email_When_Valid" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::8B5D3B57-49F8-4FBE-977D-7089636F05B9::net9.0::Domain.Tests.ValueObjects.EmailTests.Constructor_Should_Create_Email_When_Valid&lt;/TestId&gt;&#xD;
@@ -9,5 +34,21 @@
     &lt;TestId&gt;xUnit::1AEE4F22-168F-41C7-B265-5FF971721FF7::net9.0::OrderRepositoryTests.GetByOrderNumberAsync_Should_Return_Null_When_Not_Found&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::3DD1335E-3D53-418C-8910-D271D8A53703::net9.0::Application.Tests.CreateOrderCommandHandlerTests.Handle_Should_Create_Order_When_Valid&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::1AEE4F22-168F-41C7-B265-5FF971721FF7::net9.0::Infrastructure.Tests.Services.StockServiceTests.CheckAvailabilityAsync_Should_Complete_When_Stock_Is_Sufficient&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::3DD1335E-3D53-418C-8910-D271D8A53703::net9.0::Application.Tests.Orders.GetOrderQueryHandlerTests.Handle_Should_Return_Order_When_Found&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::3DD1335E-3D53-418C-8910-D271D8A53703::net9.0::Application.Tests.Orders.GetOrderQueryHandlerTests.Handle_Should_Throw_When_Order_Not_Found&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1AEE4F22-168F-41C7-B265-5FF971721FF7::net9.0::Infrastructure.Tests.Factories.OrderFactoryTests.Create_Should_Return_Valid_Order_From_Request&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1AEE4F22-168F-41C7-B265-5FF971721FF7::net9.0::Infrastructure.Tests.Factories.OrderFactoryTests.Create_Should_Throw_When_Required_Fields_Are_Invalid&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::3DD1335E-3D53-418C-8910-D271D8A53703::net9.0::Application.Tests.Validators.CreateOrderRequestValidatorTests.Should_Have_Error_When_Required_Fields_Are_Missing&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::3DD1335E-3D53-418C-8910-D271D8A53703::net9.0::Application.Tests.Validators.CreateOrderRequestValidatorTests.Should_Not_Have_Error_When_Request_Is_Valid&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::3DD1335E-3D53-418C-8910-D271D8A53703::net9.0::Application.Tests.Validators.ProductItemValidatorTests.Should_Have_Error_When_ProductItem_Is_Invalid&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::3DD1335E-3D53-418C-8910-D271D8A53703::net9.0::Application.Tests.Validators.ProductItemValidatorTests.Should_Not_Have_Error_When_ProductItem_Is_Valid&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7111C952-5A9E-45A0-9F14-CAE8578DDFB5::net9.0::Integration.Tests.PostOrdersTests.Should_Create_Order_When_Valid_Request&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7111C952-5A9E-45A0-9F14-CAE8578DDFB5::net9.0::Integration.Tests.PostOrdersTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7111C952-5A9E-45A0-9F14-CAE8578DDFB5::net9.0::Integration.Tests.Orders.PostOrdersTests.Should_Create_Order_When_Valid_Request&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f0448b85_002Dc769_002D44d7_002Db1fb_002Da6bfed67f008/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Should_Create_Order_When_Valid_Request #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::7111C952-5A9E-45A0-9F14-CAE8578DDFB5::net9.0::Integration.Tests.Orders.PostOrdersTests.Should_Create_Order_When_Valid_Request&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
