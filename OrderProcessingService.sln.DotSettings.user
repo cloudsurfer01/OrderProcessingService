@@ -4,5 +4,10 @@
     &lt;TestId&gt;xUnit::8B5D3B57-49F8-4FBE-977D-7089636F05B9::net9.0::Domain.Tests.ValueObjects.EmailTests.Constructor_Should_Create_Email_When_Valid&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::8B5D3B57-49F8-4FBE-977D-7089636F05B9::net9.0::Domain.Tests.ValueObjects.OrderTests.Constructor_Should_Create_Order_When_Valid&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::8B5D3B57-49F8-4FBE-977D-7089636F05B9::net9.0::Domain.Tests.ValueObjects.OrderTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1AEE4F22-168F-41C7-B265-5FF971721FF7::net9.0::OrderRepositoryTests.AddAsync_Should_Save_Order_To_Database&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1AEE4F22-168F-41C7-B265-5FF971721FF7::net9.0::OrderRepositoryTests.GetByOrderNumberAsync_Should_Return_Order_When_Exists&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1AEE4F22-168F-41C7-B265-5FF971721FF7::net9.0::OrderRepositoryTests.GetByOrderNumberAsync_Should_Return_Null_When_Not_Found&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::3DD1335E-3D53-418C-8910-D271D8A53703::net9.0::Application.Tests.CreateOrderCommandHandlerTests.Handle_Should_Create_Order_When_Valid&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1AEE4F22-168F-41C7-B265-5FF971721FF7::net9.0::Infrastructure.Tests.Services.StockServiceTests.CheckAvailabilityAsync_Should_Complete_When_Stock_Is_Sufficient&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
